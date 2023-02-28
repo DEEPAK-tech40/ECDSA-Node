@@ -5,11 +5,9 @@ const { utf8ToBytes } = require("ethereum-cryptography/utils");
 
 const msg = "DeepakArulananthan";
 async function main() {
-  // const privateKey = secp.utils.randomPrivateKey();
-  // console.log("Private key: " + toHex(privateKey));
+  const privateKey = secp.utils.randomPrivateKey();
+  console.log("Private key: " + toHex(privateKey));
   console.log(toHex(hash(msg)));
-  const privateKey =
-    "b7f37cdcabdb3588e23cd95a4a5e893f0ac66201c54b24fb30a809419e9f689a";
 
   const publicKey = secp.getPublicKey(privateKey);
   console.log("Public key: " + toHex(publicKey));
